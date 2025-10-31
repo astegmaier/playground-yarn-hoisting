@@ -1,0 +1,8 @@
+{
+  "name": "package-b",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "react-is": "^19.2.0"
+  }
+}
