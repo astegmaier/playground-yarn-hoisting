@@ -2,6 +2,23 @@
 
 This is a playground to permit experimentation with yarn's hoisting behavior when multiple packages depend on different major versions of the same dependency.
 
+## What is this testing?
+
+This is a simple monorepo set up with yarn workspaces, and a simple dependency graph:
+
+![Dependency Graph](./@floating-ui-react-dom@2.1.6.png)
+
+`@floating-ui/react-dom` specifies these peer dependencies:
+
+```json
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+```
+
+Package A directly depends on React 18, while Package B directly depends on React 19, so yarn should set things up in a way that respects both of these versions for both packages.
+
 ## Yarn v4 Fix Repro Steps
 
 1. Install yarn globally with `npm install -g yarn`
