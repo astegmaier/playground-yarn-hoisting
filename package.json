@@ -7,8 +7,8 @@
   "scripts": {
     "retest:windows": "yarn reinstall:windows && yarn test",
     "test": "yarn test:a && yarn test:b",
-    "test:a": "node packages/a/index.js",
-    "test:b": "node packages/b/index.js",
+    "test:a": "node --loader ./es-import-trace.js packages/a/index.js",
+    "test:b": "node --loader ./es-import-trace.js packages/b/index.js",
     "postinstall": "node add-react-debug-info.js",
     "reinstall:windows": "yarn clean:windows && yarn install",
     "clean:windows": "powershell -Command \"Remove-Item -Path 'node_modules', 'packages/a/node_modules', 'packages/b/node_modules', 'yarn.lock' -Recurse -Force -ErrorAction SilentlyContinue; exit 0\"",
