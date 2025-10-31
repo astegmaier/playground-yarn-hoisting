@@ -2,6 +2,7 @@
   "name": "package-a",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
   "dependencies": {
     "@radix-ui/react-popper": "^1.2.8",
     "react": "^18.3.1",

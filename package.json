@@ -5,6 +5,8 @@
   "license": "ISC",
   "private": true,
   "scripts": {
+    "test:a": "node packages/a/index.js",
+    "test:b": "node packages/b/index.js",
     "clean:windows": "powershell -Command \"Remove-Item -Path 'node_modules', 'packages/a/node_modules', 'packages/b/node_modules', 'yarn.lock' -Recurse -Force -ErrorAction SilentlyContinue\"",
     "clean:bash": "rm -rf node_modules packages/a/node_modules packages/b/node_modules yarn.lock"
   },
