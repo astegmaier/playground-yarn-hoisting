@@ -1,5 +1,3 @@
+// Importing this will import react as a side-effect. We've added console.log statements to all react packages that get installed, so you can see which one ends up being used.
 import { useFloating } from "@floating-ui/react-dom";
-
-// This should log the function to the console and trigger imports from react.
-// By manually adding console.log statements to the various versions of react that are hoisted, you can figure out which one actually got resolved.
 console.log(useFloating);
