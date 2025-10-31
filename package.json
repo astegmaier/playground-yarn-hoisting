@@ -5,6 +5,7 @@
   "license": "ISC",
   "private": true,
   "scripts": {
+    "retest:windows": "yarn reinstall:windows && yarn test",
     "test": "yarn test:a && yarn test:b",
     "test:a": "node packages/a/index.js",
     "test:b": "node packages/b/index.js",
