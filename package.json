@@ -8,7 +8,8 @@
     "test:a": "node packages/a/index.js",
     "test:b": "node packages/b/index.js",
     "postinstall": "node add-react-debug-info.js",
-    "clean:windows": "powershell -Command \"Remove-Item -Path 'node_modules', 'packages/a/node_modules', 'packages/b/node_modules', 'yarn.lock' -Recurse -Force -ErrorAction SilentlyContinue\"",
+    "reinstall:windows": "yarn clean:windows && yarn install",
+    "clean:windows": "powershell -Command \"Remove-Item -Path 'node_modules', 'packages/a/node_modules', 'packages/b/node_modules', 'yarn.lock' -Recurse -Force -ErrorAction SilentlyContinue; exit 0\"",
     "clean:bash": "rm -rf node_modules packages/a/node_modules packages/b/node_modules yarn.lock"
   },
   "workspaces": {
