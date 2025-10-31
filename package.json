@@ -11,8 +11,8 @@
     "test:b": "node --import ./register-es-import-trace.js packages/b/index.js",
     "postinstall": "node add-react-debug-info.js",
     "reinstall:windows": "yarn clean:windows && yarn install",
-    "clean:windows": "powershell -Command \"Remove-Item -Path 'node_modules', 'packages/a/node_modules', 'packages/b/node_modules', 'yarn.lock' -Recurse -Force -ErrorAction SilentlyContinue; exit 0\"",
-    "clean:bash": "rm -rf node_modules packages/a/node_modules packages/b/node_modules yarn.lock"
+    "clean:windows": "powershell -Command \"Remove-Item -Path 'node_modules', 'packages/a/node_modules', 'packages/b/node_modules', 'yarn.lock', '.yarn' -Recurse -Force -ErrorAction SilentlyContinue; exit 0\"",
+    "clean:bash": "rm -rf node_modules packages/a/node_modules packages/b/node_modules yarn.lock .yarn"
   },
   "workspaces": {
     "packages": [
