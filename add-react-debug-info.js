@@ -50,7 +50,7 @@ function findReactDirectories(dir) {
  * Appends the debug line to an index.js file
  */
 function appendDebugLine(indexPath) {
-    const debugLine = "\nconsole.log('React version: ', require('./package.json').version, ' from: ', __dirname);";
+    const debugLine = "\nconsole.log('imported react version:', require('./package.json').version, 'from:', __dirname);";
     
     try {
         // Read the current content
