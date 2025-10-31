@@ -50,14 +50,14 @@ function findReactDirectories(dir) {
  * Appends the debug line to an index.js file
  */
 function appendDebugLine(indexPath) {
-    const debugLine = "\nconsole.log('imported react version:', require('./package.json').version, 'from:', __dirname);";
+    const debugLine = "\nconsole.log('Imported react version:', require('./package.json').version, 'from:', __dirname);";
     
     try {
         // Read the current content
         const currentContent = fs.readFileSync(indexPath, 'utf8');
         
         // Check if the debug line already exists to avoid duplicates
-        if (currentContent.includes("console.log('React version: '")) {
+        if (currentContent.includes("console.log('Imported react version:'")) {
             console.log(`Debug line already exists in: ${indexPath}`);
             return false;
         }
