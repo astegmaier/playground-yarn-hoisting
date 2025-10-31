@@ -5,8 +5,8 @@
   "license": "ISC",
   "private": true,
   "scripts": {
-    "clean:windows": "if exist node_modules rmdir /s /q node_modules && if exist yarn.lock del yarn.lock",
-    "clean:bash": "rm -rf ./node_modules/ && rm yarn.lock"
+    "clean:windows": "powershell -Command \"Remove-Item -Path 'node_modules', 'packages/a/node_modules', 'packages/b/node_modules', 'yarn.lock' -Recurse -Force -ErrorAction SilentlyContinue\"",
+    "clean:bash": "rm -rf node_modules packages/a/node_modules packages/b/node_modules yarn.lock"
   },
   "workspaces": {
     "packages": [
